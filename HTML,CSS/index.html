@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プロフィールカード一覧</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!--
+      課題:
+      このファイルにプロフィールカード一覧ページのHTMLを実装してください。
+
+      実装する内容:
+      - ヘッダー
+      - メインコンテンツ
+      - セクション見出し
+      - プロフィールカード3件
+      - フッター
+
+      ヒント:
+      - header / main / section / article / footer を使ってみましょう
+      - カード一覧をまとめる要素も作りましょう
+      - カードの中には画像・役職・名前・説明・ボタンを入れましょう
+    -->
+
+  <!-- ここから実装してください -->
+
+  <div class="site-header">
+    <!--「見出し部分」に使用。主にロゴ、ナビゲーション、サイト名等を配置-->
+    <p>Frontend Team Members</p>
+  </div>
+
+  <main>
+    <h1>プロフィールカード一覧</h1>
+    <h2>
+      html/css基礎モジュール用のサンプルUIです。PCでは3列、スマートフォンでは1列表示になります。
+    </h2>
+
+    <!-- カード全体 -->
+    <div class="card-container">
+
+      <!-- カード1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80">
+        <div class="card-content">
+          <h3>Frontend Engineer</h3>
+          <h4>山田花子</h4>
+          <p>UI実装とアクセシビリティ改善を担当。ユーザーにとって使いやすい画面づくりが得意です。</p>
+          <button>詳細を見る</button>
+        </div>
+      </div>
+
+      <!-- カード2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80">
+        <div class="card-content">
+          <h3>UI Designer</h3>
+          <h4>佐藤 健太</h4>
+          <p>デザインシステムの整備を担当。見た目の美しさと実装しやすさの両立を重視しています。</p>
+          <button>詳細を見る</button>
+        </div>
+      </div>
+
+      <!-- カード3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80">
+        <div class="card-content">
+          <h3>Project Manager</h3>
+          <h4>鈴木 美咲</h4>
+          <p>開発進行とチーム連携を担当。課題の整理と意思決定を支え、プロジェクトを前に進めます。</p>
+          <button>詳細を見る</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <!--「フッター部分」に使用。主に著作権表示、サイトマップ、問い合わせ先等を配置-->
+    <p>©2026 Frontend Team. All rights reserved.</p>
+  </footer>
+
+  <!-- ここまで実装してください -->
+</body>
+
+</html>
