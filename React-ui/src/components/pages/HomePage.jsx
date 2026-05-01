@@ -24,7 +24,8 @@ function HomePage() {
     }
     // 2. 名前または役職に keyword が含まれていたら表示する(チェック用のテキストは以下のように整形してください: `${name} ${role}`.toLowerCase()。変数名はサンプルです)
     return profiles.filter((profile) => {
-      //1人ずつチェックをし、条件に合うもののみを残す
+      //profilesの中から1人ずつチェックをし、条件に合うprofileのみを残す
+      //filter()は、配列の中から条件に合う要素だけを抜き取るメソッド
       const text = `${profile.name} ${profile.role}`.toLowerCase();
       //名前と役職をスペースでつなげて小文字に変換したテキストを作成
       return text.includes(normalizedKeyword);
@@ -42,7 +43,8 @@ function HomePage() {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    //ブラウザの標準動作を止めて、React側で自由に制御（フォームの送信を防止）するためのコード
+    //フォームが送信されると、handleSearchが呼ばれている
+    // ブラウザの標準動作を止めて、React側で自由に制御（フォームの送信を防止）するためのコード
 
     // TODO:
     // 必要なら検索ボタン押下時の処理を追加してください。
@@ -66,7 +68,7 @@ function HomePage() {
           onKeywordChange={handleKeywordChange}
           //入力処理
           onSearch={handleSearch}
-        //ボタン押下処理
+          //ボタン押下処理
         />
       }
       // Reactはタグの中で props を使って

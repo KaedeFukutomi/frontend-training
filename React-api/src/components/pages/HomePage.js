@@ -8,6 +8,7 @@ import filterUsers from '../../utils/filterUsers';
 
 function HomePage() {
   // 1. 検索欄に入力している値を保持する state を作成する
+  // State:コンポーネント専用の変化するデータ（状態）を作るための仕組み
   const [inputValue, setInputValue] = useState('');
   // 2. 実際の検索条件として使う値を保持する state を作成する
   const [keyword, setKeyword] = useState('');

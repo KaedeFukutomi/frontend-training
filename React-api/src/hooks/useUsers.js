@@ -14,6 +14,7 @@ function useUsers() {
   const [isLoading, setIsLoading] = useState(false);
   //isLoadingは読み込み中かどうかを管理するstate
   //setIsLoadingはisLoadingを更新する関数
+  //初期値はfalse（読み込み中ではない）
 
   // TODO:
   // エラーメッセージを管理する state を作成する
@@ -23,15 +24,13 @@ function useUsers() {
 
   useEffect(() => {
     let ignore = false;
-    //コンポーネントが画面にある
-    //??? これの意味についてめっしさんに聞く
+    //コンポーネントが画面にあるかを管理
 
     const fetchUsers = async () => {
       // 非同期でユーザー情報を取得する関数を作っている
 
       // TODO:
       // 通信開始時の状態をセットする
-
       try {
         // TODO:
         // fetch でユーザー一覧を取得する
@@ -47,8 +46,7 @@ function useUsers() {
         // JSON に変換する
         const data = await res.json();
         //データを使える形（JavaScriptオブジェクト）に変換する
-        setUsers(data);
-        //取得したデータを画面に表示できるようにする
+    
 
         // TODO:
         // アンマウント後でなければ users を更新する
