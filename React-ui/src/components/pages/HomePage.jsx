@@ -12,6 +12,7 @@ function HomePage() {
   //useState('');は、データ（状態）を作る関数で、引数は初期値
 
   const filteredProfiles = useMemo(() => {
+    //useMemoは、特定の値が変わったときだけ、ある処理を再実行するためのReactのフック
     const normalizedKeyword = keyword.trim().toLowerCase();
     //trim()は、文字列の前後から空白を削除するメソッド
     //toLowerCase()は、文字列をすべて小文字に変換するメソッド
@@ -20,7 +21,7 @@ function HomePage() {
     // 1. keyword が空なら全件表示する
     if (!normalizedKeyword) {
       return profiles;
-      //useMemoの結果としてfilteredProfilesに代入されている
+      //useMemoの結果としてfilteredProfilesに代入
     }
     // 2. 名前または役職に keyword が含まれていたら表示する(チェック用のテキストは以下のように整形してください: `${name} ${role}`.toLowerCase()。変数名はサンプルです)
     return profiles.filter((profile) => {
